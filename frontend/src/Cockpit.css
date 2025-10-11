@@ -1,0 +1,45 @@
+/* Cockpit.css */
+body {
+    margin: 0;
+    background: #0a0a0a;
+    font-family: "Orbitron", sans-serif;
+    color: #e0e0e0;
+}
+
+.solution-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    background: rgba(30, 10, 10, 0.85);
+    color: #ff4d4d;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.solution-panel h4 {
+    margin: 0 0 10px;
+    color: #ff6666;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+    padding-bottom: 5px;
+}
+
+.solution-panel ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

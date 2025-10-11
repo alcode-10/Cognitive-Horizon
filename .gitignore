@@ -1,0 +1,41 @@
+# --- GENERAL ---
+node_modules/
+.env
+package-lock.json
+.DS_Store
+Thumbs.db
+.vscode/
+dist/
+build/
+logs/
+*.log
+coverage/
+temp/
+
+# --- BACKEND EXCLUSIONS ---
+backend/node_modules/
+backend/.env
+backend/package-lock.json
+backend/logs/
+backend/uploads/
+backend/temp/
+backend/test/
+backend/.DS_Store
+
+# --- FRONTEND EXCLUSIONS ---
+frontend/node_modules/
+frontend/.env
+frontend/package-lock.json
+frontend/src/TelemetryPanel.css
+frontend/src/TelemetryPanel.jsx
+frontend/src/voicecommand.css
+frontend/src/VoiceCommand.jsx
+frontend/dist/
+frontend/build/
+frontend/.DS_Store
+frontend/temp/
+frontend/.cache/
+frontend/.vercel/
+frontend/.next/
+frontend/public/test-assets/
+frontend/src/__tests__/

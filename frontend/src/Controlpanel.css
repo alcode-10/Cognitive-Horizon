@@ -1,0 +1,42 @@
+.control-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(40, 40, 55, 0.45);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* ensures it's above the map */
+    width: 220px;
+    font-family: Arial, sans-serif;
+}
+
+.control-panel h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.control-panel p {
+    margin: 4px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.control-panel button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(255, 0, 0);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.control-panel button:hover {
+    background: #cc0000;
+}

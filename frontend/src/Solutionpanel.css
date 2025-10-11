@@ -1,0 +1,66 @@
+.solution-panel {
+    position: absolute;
+    top:20px;
+    bottom: 10px;
+    left: 20px;
+    width: 100px;
+    z-index: 1000;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(40, 40, 55, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, );
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.solution-panel h4 {
+    color: black;
+    margin: 0 0 12px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.solution-panel ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+.solution-panel li {
+    margin-bottom: 8px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.solution-panel li:last-child {
+    margin-bottom: 0;
+}
+
+.solution-panel button {
+    /* Size adjustments */
+    padding: 5px 10px;
+    font-size: 12px;
+
+    margin-top: 15px;
+    /* Adds space above the buttons */
+    margin-right: 8px;
+    /* Adds space between buttons */
+
+    /* Visual style to match the panel */
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #f0f0f0;
+    /* Slightly off-white text */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.solution-panel button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,73 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+body {
+  margin: 0;
+  background: #0d0d0d;
+  /* dark cockpit base */
+  font-family: "Orbitron", sans-serif;
+  /* cockpit vibe font */
+  color: #fff;
+}
+
+.cockpit-panel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(20, 20, 30, 0.8);
+  /* dark transparent */
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  /* subtle red border */
+  border-radius: 12px;
+  padding: 16px;
+  color: #ff4c4c;
+  /* cockpit red */
+  backdrop-filter: blur(6px);
+  /* glassy */
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+  /* red glow */
+}
+.leaflet-marker-icon {
+  transition: transform 1.5s linear;
+  /* smooth glide */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
