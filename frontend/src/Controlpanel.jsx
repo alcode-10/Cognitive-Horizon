@@ -73,7 +73,7 @@ const ControlPanel = ({ planePosition, onSolution }) => {
 
         try {
             console.log(" Emergency Payload Sent:", payload);
-            const res = await axios.post("https://cognitive-horizon-lite-hde1.onrender.com/emergency", payload);
+            const res = await axios.post("https://cognitive-horizon-lite-hde1.onrender.com/api/emergency", payload);
             console.log("AI Response:", res.data);
             onSolution(res.data);
 
