@@ -5,7 +5,7 @@ import "./Controlpanel.css";
 import { toast } from "react-toastify";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://cognitive-horizon-lite-hde1.onrender.com/");
 
 const ControlPanel = ({ planePosition, onSolution }) => {
     const [loading, setLoading] = useState(false);
@@ -73,7 +73,7 @@ const ControlPanel = ({ planePosition, onSolution }) => {
 
         try {
             console.log(" Emergency Payload Sent:", payload);
-            const res = await axios.post("http://localhost:5000/api/emergency", payload);
+            const res = await axios.post("https://cognitive-horizon-lite-hde1.onrender.com/emergency", payload);
             console.log("AI Response:", res.data);
             onSolution(res.data);
 
