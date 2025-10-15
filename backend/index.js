@@ -19,7 +19,11 @@ app.use(express.json());
 app.use("/api", gliderouter);
 
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+const io = new Server(server, {
+  cors: { origin: ["https://cognitive-horizon-lite-hde1.onrender.com", "http://localhost:5173/"] },
+  methods: ["GET", "POST"],
+  credentials: true
+});
 app.set("io", io);
 
 if (MONGO_DB_URI) {
@@ -220,6 +224,15 @@ function cleanAIResponse(raw) {
 }
 
 app.get("/", (_, res) => res.send("Cognitive Horizon backend running"));
+app.get("/health", (_, res) => {
+  res.json({ 
+    status: "ok", 
+    timestamp: new Date().toISOString(),
+    isEmergencyActive,
+    hasArrived,
+    currentPosition
+  });
+});
 
 app.post("/api/emergency", async (req, res) => {
   try {
