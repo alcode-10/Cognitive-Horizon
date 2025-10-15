@@ -5,7 +5,25 @@ import "./Controlpanel.css";
 import { toast } from "react-toastify";
 import { io } from "socket.io-client";
 
-const socket = io("https://cognitive-horizon-lite-hde1.onrender.com/");
+// const socket = io("https://cognitive-horizon-lite-hde1.onrender.com/");
+const socket = io("https://cognitive-horizon-lite-hde1.onrender.com/", {
+  transports: ['websocket', 'polling'], // Fallback to polling
+  reconnection: true,
+  reconnectionDelay: 1000,
+  reconnectionAttempts: 5
+});
+
+socket.on("connect", () => {
+  console.log("✅ Socket connected:", socket.id);
+});
+
+socket.on("disconnect", () => {
+  console.log("❌ Socket disconnected");
+});
+
+socket.on("connect_error", (error) => {
+  console.error("Socket connection error:", error);
+});
 
 const ControlPanel = ({ planePosition, onSolution }) => {
     const [loading, setLoading] = useState(false);
